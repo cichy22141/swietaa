@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona o Świętach</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="script1.js" defer></script>
+    <script src="script2.js" defer></script>
+    <style>
+        /* Stylizacja reklamy */
+        #reklama {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 150px;
+            height: 100vh;
+            text-align: center;
+            background-color: white;
+        }
+
+        #reklama img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        #reklama img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Stylizacja tła i tekstu */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('tło.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #naglowek {
+            margin-left: 150px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            max-width: calc(100% - 170px);
+            position: relative;
+        }
+
+        /* Odliczanie połączone z nagłówkiem */
+        #countdown {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+        }
+
+        /* Nawigacja */
+        #nawigacja nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        #nawigacja nav ul li {
+            margin: 0 10px;
+        }
+
+        #nawigacja nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Stylizacja treści */
+        #tekst {
+            margin-left: 150px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-width: calc(100% - 170px);
+            text-align: center;
+        }
+
+        /* Stopka */
+        #stopka {
+            text-align: center;
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            margin-left: 150px;
+            width: calc(100% - 150px);
+        }
+    </style>
+</head>
+<body>
+    <div id="reklama">
+        <a href="https://superbombka.pl/pl/products/choinka-sztuczna-premium-220-cm-sosna-diamentowa-drzewko-bozonarodzeniowe-943.html?gad_source=1&gclid=CjwKCAiAjeW6BhBAEiwAdKltMsi20mYCaTBmuQzNlJ1Ilo6sLD8JHkoWbXA2qFnbMG--EPmiry3TJRoChJkQAvD_BwE" target="_blank">
+            <img src="choinka.jpg" alt="Choinka">
+        </a>
+    </div>
+    
+    <div id="naglowek">
+        <h1>Święta i Tradycje</h1>  
+        <p>Odkryj magię świątecznego czasu!</p>
+        <div id="countdown">00 dni 00 godzin 00 minut 00 sekund</div>
+    </div>
+
+    <div id="nawigacja">
+        <nav>
+            <ul>
+                <li><a href="sylwester.html">Sylwester</a></li>
+                <li><a href="boze-narodzenie.html">Boże Narodzenie</a></li>
+                <li><a href="boze-narodzenie-inna-religia.html">Boże Narodzenie w innej religii</a></li>
+                <li><a href="potrawy-swiateczne.html">Potrawy świąteczne</a></li>
+                <li><a href="bezpieczenstwo-ferie.html">Bezpieczeństwo podczas ferii</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="tekst">
+        <h2>Witamy w świecie świątecznej magii!!!</h2>
+        <p>Zapraszamy do odkrycia tradycji, inspiracji i pomysłów na niezapomniane święta. Niezależnie od tego, czy obchodzisz Boże Narodzenie, Wielkanoc, Dzień Wszystkich Świętych czy inne uroczystości, znajdziesz tutaj wszystko, czego potrzebujesz, aby uczynić ten czas wyjątkowym.</p>
+    </div>
+
+    <div id="stopka">
+        <p>&copy; 2024 Święta i Tradycje. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</body>
+</html>
