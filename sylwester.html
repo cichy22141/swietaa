@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylwester 2025</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('tło1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        #naglowek {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        #naglowek h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        #tresc {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        #tresc h2 {
+            text-align: center;
+            font-size: 2rem;
+        }
+        #nawigacja nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+        #nawigacja nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        #nawigacja nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        #nawigacja nav ul li a:hover {
+            text-decoration: underline;
+        }
+        #stopka {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        #odliczanie-kontener {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        #countdown {
+            font-size: 2rem;
+        }
+    </style>
+    <script>
+        // Prosty skrypt do odliczania do Nowego Roku
+        const countdown = () => {
+            const now = new Date().getTime();
+            const newYear = new Date('January 1, 2025 00:00:00').getTime();
+            const timeLeft = newYear - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                `${days} dni ${hours} godz. ${minutes} min ${seconds} sek.`;
+
+            if (timeLeft < 0) {
+                clearInterval(interval);
+                document.getElementById('countdown').innerHTML = "Szczęśliwego Nowego Roku!";
+            }
+        };
+
+        const interval = setInterval(countdown, 1000);
+    </script>
+</head>
+<body>
+    <div id="odliczanie-kontener">
+        <div id="countdown"></div>
+    </div>
+    
+    <div id="naglowek">
+        <h1>Przywitaj Nowy Rok 2025!</h1>
+    </div>
+    <div id="nawigacja">
+        <nav>
+            <ul>
+                <li><a href="sylwester.html">Sylwester</a></li>
+                <li><a href="boze-narodzenie.html">Boże Narodzenie</a></li>
+                <li><a href="boze-narodzenie-inna-religia.html">Boże Narodzenie w innej religii</a></li>
+                <li><a href="potrawy-swiateczne.html">Potrawy świąteczne</a></li>
+                <li><a href="bezpieczenstwo-ferie.html">Bezpieczeństwo podczas ferii</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="tresc">
+        <h2>Planuj z nami noc sylwestrową</h2>
+        <p>Zbliża się Sylwester 2025! Świętuj w najlepszym stylu, planując wyjątkową noc pełną radości, zabawy i niezapomnianych chwil.</p>
+        <p>Sprawdź nasze propozycje na najlepsze miejsca do świętowania, odkryj przepisy na wyśmienite potrawy i dowiedz się, jak bezpiecznie korzystać z fajerwerków.</p>
+    </div>
+    <div id="stopka">
+        <p>&copy; 2024 Sylwester 2025. Wszystkie prawa zastrzeżone.</p>
+    </div>
+</body>
+</html>

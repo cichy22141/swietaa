@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boże Narodzenie w innej religii</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date('January 7, 2025 00:00:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `Za ${days} dni ${hours} godzin ${minutes} minut ${seconds} sekund.`;
+
+                if (timeLeft < 0) {
+                    countdownElement.innerHTML = "Boże Narodzenie już trwa!";
+                }
+            }
+
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
+    <style>
+        body {
+            background: url('tło2.jpg') no-repeat center -500px fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #naglowek h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        #tresc h2 {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        #tresc p {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        nav ul {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="odliczanie-kontener">
+        <div id="countdown"></div>
+    </div>
+    
+    <div id="naglowek">
+        <h1>Boże Narodzenie w innej religii</h1>
+    </div>
+    <div id="nawigacja">
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="sylwester.html">Sylwester</a></li>
+                <li><a href="boze-narodzenie.html">Boże Narodzenie</a></li>
+                <li><a href="potrawy-swiateczne.html">Potrawy świąteczne</a></li>
+                <li><a href="bezpieczenstwo-ferie.html">Bezpieczeństwo podczas ferii</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="tresc">
+        <h2>Święta w Kościele Prawosławnym</h2>
+        <p>Boże Narodzenie w Kościele Prawosławnym obchodzone jest 7 stycznia. Wierni świętują zgodnie z kalendarzem juliańskim. 
+        W tym dniu odbywają się uroczyste nabożeństwa, śpiewane są hymny liturgiczne, a wierni dzielą się posiłkiem po zakończeniu 40-dniowego postu.</p>
+        <p>Ciekawostka: Wiele cerkwi dekorowanych jest pięknymi ikonami, które przedstawiają sceny narodzenia Chrystusa oraz świętych. Święto to jest także okazją do spotkań rodzinnych i obdarowywania się drobnymi prezentami.</p>
+    </div>
+    <div id="stopka">
+        <p>&copy; 2024 Święta i Tradycje. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</body>
+</html>
